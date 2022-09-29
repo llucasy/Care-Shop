@@ -9,9 +9,13 @@
   src: url(fonts/Nivea-Bold.woff) format('woff');
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+
 body {
   background-color: #00136f;
-  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -35,23 +39,26 @@ picture {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   justify-content: center;
   gap: 0 97px;
-  max-width: 720px;
-  outline: 2px solid  red;
+  max-width: 1050px;
   margin: 0 auto;
+  padding: 0 15px;
 
   position: absolute;
-  top: 0;
+  top: -48px;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
 .wrapper-about {
-  outline: 2px solid yellow;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: .875rem;
+  line-height: 1.5rem;
 }
 
 .wrapper-about h1 {
@@ -59,13 +66,28 @@ picture {
   font-size: 2rem;
   line-height: 3.5rem;
   text-transform: uppercase;
-  color: #fff;
   margin: 15px 0 9px;
   font-weight: 700;
 }
 
 .wrapper-login {
-  max-width: 351px;
-  min-height: 510px;
+  width: 351px;
+  min-height: 614px;
   background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 70px 0;
+}
+
+.wrapper-login h2 {
+  font-family: Nivea,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  color: #00136f;
+  margin: 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
