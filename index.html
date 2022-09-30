@@ -12,24 +12,48 @@
 
 <body>
   <picture>
-    <source srcset="images/login-banner-principal-320-2x.png" media="(max-width: 425px)" width="100%" height="auto" />
+    <source srcset="images/login-banner-principal-320-2x.png" media="(max-width: 500px)" width="100%" height="auto" />
     <source srcset="images/login-banner-principal-768.png" media="(max-width: 768px)" width="100%" height="auto" />
     <img src="images/login-banner-principal-1366.png" alt="Banner Principal - Care Shop"
       title="Banner Principal - Care Shop" class="banner-item-image" />
   </picture>
 
   <main class="container">
-    <section class="wrapper-about">
-      <img id="logo-careshop" src="/images/careshop.svg" alt="Logo careshop">
-      <h1>Care Shop</h1>
-      <p>Atenção! Poderão efetivar compras neste site somente pessoas previamente autorizadas, que possuam login e senha para acesso. Lembrando que logins e senhas são pessoais e não podem em hipótese alguma serem transferidos a terceiros.</p>
-    </section>
-    <section class="wrapper-login">
-      <h2>Já possui uma conta?</h2>
-      <p>Se você já possui uma conta, informe os dados de acesso.</p>
-    </section>
-  </main>
 
+    <section class="wrapper-about">
+      <img id="logo-careshop" src="images/careshop.svg" alt="Logo careshop">
+      <h1>Care Shop</h1>
+      <p>Atenção! Poderão efetivar compras neste site somente pessoas previamente autorizadas, que possuam login e senha
+        para acesso. Lembrando que logins e senhas são pessoais e não podem em hipótese alguma serem transferidos a
+        terceiros.</p>
+    </section>
+
+    <section class="wrapper-login">
+      <form>
+        <h2>Já possui uma conta?</h2>
+        <p class="description">Se você já possui uma conta, informe os dados de acesso.</p>
+        <fieldset>
+          <label for="email">
+            <p>E-mail</p>
+            <input type="email" name="email" id="email" autocomplete="email" placeholder="Digite seu e-mail" required>
+          </label>
+        </fieldset>
+        <fieldset for="password">
+          <p>Senha<small><a href="#">Esqueceu sua senha?</a></small></p>
+          <input type="password" name="password" id="password" autocomplete="current-password"
+            placeholder="Digite sua senha" maxlength="50" required>
+        </fieldset>
+        <small>Não tem conta?<a href="#">Cadastre agora</a></small>
+        <div class="group-button">
+          <button id="submit" type="submit">Entrar</button>
+          <button id="first-access">Primeiro acesso?</button>
+          <button id="invite">Cadastro Convidado</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>

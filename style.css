@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue: #00136f;
+}
+
 @font-face {
   font-family: "Nivea";
   src: url(fonts/Nivea-Bold.woff) format('woff');
@@ -15,7 +19,7 @@
 }
 
 body {
-  background-color: #00136f;
+  background-color: var(--blue);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -32,6 +36,12 @@ picture {
   max-width: 185px;
 }
 
+@media screen and (max-width: 500px) {
+  #logo-careshop {
+    display: none;
+  }
+}
+
 .banner-item-image {
   width: 100%;
   height: auto;
@@ -43,15 +53,30 @@ picture {
   align-items: center;
   justify-content: center;
   gap: 0 97px;
-  max-width: 1050px;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 1050px;
 
   position: absolute;
   top: -48px;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 0 70px;
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    gap: 0;
+    grid-template-columns: none;
+    top: 0;
+  }
 }
 
 .wrapper-about {
@@ -61,6 +86,15 @@ picture {
   line-height: 1.5rem;
 }
 
+@media screen and (max-width: 500px) {
+  .wrapper-about p {
+    font-size: .75rem;
+    line-height: 1rem;
+    text-align: center;
+    margin-bottom: 43px;
+  }
+}
+
 .wrapper-about h1 {
   font-family: Nivea, sans-serif;
   font-size: 2rem;
@@ -68,6 +102,12 @@ picture {
   text-transform: uppercase;
   margin: 15px 0 9px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-about h1 {
+    display: none;
+  }
 }
 
 .wrapper-login {
@@ -80,14 +120,150 @@ picture {
   margin: 70px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .wrapper-login {
+    width: 238.766px;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-login {
+    width: 100%;
+    margin: 150px 0 32px;
+    order:-1;
+    min-height: auto;
+  }
+}
+
+.wrapper-login form {
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper-login h2 {
   font-family: Nivea,sans-serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-transform: uppercase;
-  color: #00136f;
+  color: var(--blue);
   margin: 0;
   font-weight: 700;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-login h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-login h2 {
+    font-size: 1rem;
+  }
+}
+
+.wrapper-login .description {
+  font-family: Open Sans,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 23px 0 23px 7px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-login .description {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-login .description {
+    font-size: 12px;
+  }
+}
+
+.wrapper-login fieldset {
+  border: 0;
+}
+
+.wrapper-login fieldset p {
+  display: flex;
+  font-family: Open Sans,sans-serif;
+  font-weight: 600;
+  font-size: .75rem;
+  line-height: 1.25rem;
+  color: #242424;
+  margin: 0;
+  padding-left: 18px;
+  justify-content: space-between;
+}
+
+.wrapper-login input {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 500px;
+  border: 1px solid #e5e5e5;
+  padding: 0 16px;
+  min-height: 50px;
+  font-family: Open Sans,sans-serif;
+  font-size: .813rem;
+  line-height: 1.25rem;
+  color: #7f7f7f;
+  margin-bottom: 30px;
+}
+
+.wrapper-login form a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 400;
+}
+
+.wrapper-login form small {
+  width: 100%;
+  display: flex;
+  font-family: Open Sans,sans-serif;
+  justify-content: flex-end;
+  font-size: 10px;
+  color: var(--blue);
+}
+
+.wrapper-login button {
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-family: Open Sans,sans-serif;
+  font-weight: 600;
+  font-size: .813rem;
+  line-height: 1.125rem;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  max-width: 270px;
+  min-height: 50px;
+  background: var(--blue);
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-login button {
+    max-width: 100%;
+  }
+}
+
+
+.group-button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 31px;
+}
+
+#first-access, #invite {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background: #fff;
+  margin-top: 8px;
 }
